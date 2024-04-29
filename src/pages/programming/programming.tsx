@@ -1,11 +1,12 @@
 import React from 'react';
 import './programming.css';
+import Navmenu from '../../components/navmenu/navmenu';
 
 
 const Programming = () => {
     return (
         <>
-            <h1>Programming</h1>
+            <Navmenu />
         </>
     );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import './contact.css';
+import Navmenu from '../../components/navmenu/navmenu';
 
 
 const Contact = () => {
     return (
         <>
-            <h1>Contact</h1>
+            <Navmenu />
         </>
     );
 }
