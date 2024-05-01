@@ -12,8 +12,3 @@
 .footerInner {
 	padding: 5px;
 }
-
-.wordWrap {
-	white-space: pre-line;      
-    word-wrap: break-word;      
-}

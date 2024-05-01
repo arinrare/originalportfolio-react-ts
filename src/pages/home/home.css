@@ -1,0 +1,71 @@
+.content {	
+	margin-right: 76px;
+	padding-bottom: 32px;
+	min-height: calc(100% - 200px);
+	width: 100%;
+}
+
+.contentWrapper {
+	width: 100%;
+	text-align: center;
+	padding-top: 7%;
+}
+
+.center {
+	text-align: center;
+}
+
+.heading {	
+	color: #D5AA3B;
+	font-family: 'Dancing Script', cursive;
+	font-size: 150%;
+	text-align: center;
+}
+	
+.headingName {	
+    font-family: 'Dancing Script', cursive;
+	font-size: 300%;
+	color: #D5AA3B;
+	text-align: center;
+}
+
+.portrait {	
+    padding-top: 0%;
+    width: 188px; 
+    height: 188px;
+}
+
+.socialContainer {
+	margin-top: 30px;
+}
+
+.social {
+	margin: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.homeContent {	
+	width: 65%;
+	color: white;
+	text-align: left;
+	vertical-align: top;
+	padding-bottom: 7%;
+	padding-left: 3%;
+}
+
+.contentHeading {
+	font-family: 'Spinnaker';
+	font-size: 150%;
+	text-align: center;
+	padding-right: 10%;
+}
+
+.contentText {
+	width: 90%;
+	font-family: 'Spinnaker';
+	color: #E4E4E4;
+}
+
+
+	

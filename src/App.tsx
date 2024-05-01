@@ -7,27 +7,32 @@ import Programming from './pages/programming/programming';
 import Contact from './pages/contact/contact';
 import Resume from './pages/resume/resume';
 import Web from './pages/web/web';
+import ReactGA from 'react-ga';
+
+const TrackingID = 'G-FKJK7PJ0VH';
 
 function App() {
-    useEffect(() => {
-        document.title = "Portfolio of Michael Baggott"
-    }, []);
+  ReactGA.initialize(TrackingID);
+  
+  useEffect(() => {
+    document.title = "Portfolio of Michael Baggott"
+  }, []);
     
     // <BrowserRouter basename="/portfolio/originalportfoilio-react-ts"> ** Goes in the BrowserRouter tag above the Routes tag
-    return (
-      <>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/browse' element={<Browse />} />
-            <Route path='/programming' element={<Programming />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/resume' element={<Resume />} />
-            <Route path='/web' element={<Web />} />
-          </Routes>
-        </BrowserRouter>
-      </>
-    );
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/browse' element={<Browse />} />
+          <Route path='/programming' element={<Programming />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
+          <Route path='/web' element={<Web />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
