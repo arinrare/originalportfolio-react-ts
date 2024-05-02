@@ -5,6 +5,10 @@ const logo = require('../../images/navmenu/logo.jpg');
 
 const Navmenu = () => {
     
+    if (sessionStorage.getItem('currentPage') === null) {
+        handleClick('0');
+    }
+	   
     function handleClick(ID: string) {
             sessionStorage.setItem('currentPage', ID);
     } 
@@ -40,12 +44,12 @@ const Navmenu = () => {
             </div>
             <div className = "spacerBar"></div>
             <div className='navmenu'>
-                <Link onClick={() => handleClick('0')} className={parseInt(sessionStorage.getItem('currentPage') ?? '0') === 0 ? 'nav active' : 'nav'} to='/'>HOME</Link>
-                <Link onClick={() => handleClick('1')} className={parseInt(sessionStorage.getItem('currentPage') ?? '1') === 1 ? 'nav active' : 'nav'} to='/resume'>RESUME</Link>
-                <Link onClick={() => handleClick('2')} className={parseInt(sessionStorage.getItem('currentPage') ?? '2') === 2 ? 'nav active' : 'nav'} to='/browse'>BROWSE</Link>
-                <Link onClick={() => handleClick('3')} className={parseInt(sessionStorage.getItem('currentPage') ?? '3') === 3 ? 'nav active' : 'nav'} to='/programming'>PROGRAMMING</Link>
-                <Link onClick={() => handleClick('4')} className={parseInt(sessionStorage.getItem('currentPage') ?? '4') === 4 ? 'nav active' : 'nav'} to='/web'>WEB</Link>
-                <Link onClick={() => handleClick('5')} className={parseInt(sessionStorage.getItem('currentPage') ?? '5') === 5 ? 'nav active' : 'nav'} to='/contact'>CONTACT</Link>
+                <Link onClick={() => handleClick('0')} className={sessionStorage.getItem('currentPage') === '0' ? 'nav active' : 'nav'} to='/'>HOME</Link>
+                <Link onClick={() => handleClick('1')} className={sessionStorage.getItem('currentPage') === '1' ? 'nav active' : 'nav'} to='/resume'>RESUME</Link>
+                <Link onClick={() => handleClick('2')} className={sessionStorage.getItem('currentPage') === '2' ? 'nav active' : 'nav'} to='/browse'>BROWSE</Link>
+                <Link onClick={() => handleClick('3')} className={sessionStorage.getItem('currentPage') === '3' ? 'nav active' : 'nav'} to='/programming'>PROGRAMMING</Link>
+                <Link onClick={() => handleClick('4')} className={sessionStorage.getItem('currentPage') === '4' ? 'nav active' : 'nav'} to='/web'>WEB</Link>
+                <Link onClick={() => handleClick('5')} className={sessionStorage.getItem('currentPage') === '5' ? 'nav active' : 'nav'} to='/contact'>CONTACT</Link>
             </div>
             <div className = "spacerBar"></div>
         </>
