@@ -1,6 +1,8 @@
 NOTE: To run locally remove the basename attribute from the BrowserRouter element in App.tsx
 This is only required when configuring the base URL on a subpage on the web host
 
+Additionally, remove the subfolder paths in the webpack config package.json
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
