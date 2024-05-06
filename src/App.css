@@ -29,7 +29,7 @@ body {
 }
 
 @font-face {
-  font-family: 'DancingScript';
+  font-family: 'Dancing Script';
   src: 	url('./fonts/DancingScript-Regular.woff2') format('woff'), /* Modern Browsers */
   url('./fonts/DancingScript-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }

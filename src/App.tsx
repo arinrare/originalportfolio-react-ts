@@ -2,7 +2,7 @@ import React , { useEffect } from 'react';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/home';
-import Browse from './pages/browse/broswe'; 
+import Browse from './pages/browse/browse'; 
 import Programming from './pages/programming/programming';
 import Contact from './pages/contact/contact';
 import Resume from './pages/resume/resume';

@@ -1,0 +1,224 @@
+.gridHeading {
+	position: relative;
+	left: -20px;
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 130%;
+	color: #E4E4E4;
+}	
+
+.gridContainer {
+	vertical-align: top;
+	padding: 20px;
+	width: 35%;
+	min-width: 450px;
+	text-align: left;
+}
+	
+.browseContainer {
+	vertical-align: top;
+	width: 35%;
+	min-width: 450px;
+	text-align: center;
+}
+	
+.browseInnerContainer {
+	width: 452px;
+	position: relative;
+}
+	
+.gridWrapper {
+	width: 100%;
+	text-align: center;
+}
+	
+.description {
+	width: 65%;
+	vertical-align: top;
+}
+	
+.label {
+	width: 35%;
+}
+
+.browseContent {
+	min-height: 500px;
+	text-align: center;
+}
+
+.zoom {
+    position:relative;
+    width:450px;
+    height:auto;
+    left:0px;
+    top:0px;
+    border:1px solid black;
+    transition: width 0.3s ease,height 0.3s ease,left 0.3s ease,top 0.3s ease;
+    width: 450px;
+    height: 208px;
+}
+	
+.zoomDiv {
+    position:relative;
+    width:450px;
+    height:auto;
+    left:0px;
+    top:0px;
+    transition: width 0.3s ease,height 0.3s ease,left 0.3s ease,top 0.3s ease;
+}
+
+.ZoomIt section {
+	clear:both;
+}
+	
+.ZoomIt article {
+	margin:	20px;
+	overflow: visible;
+}
+	
+.zoomIcon {
+	position: absolute;
+	z-index:20;
+    width: 30px;
+    height: 30px;
+}
+	
+.zoomOutIcon {
+	position: absolute;
+	z-index:20;
+    width: 30px;
+    height: 30px;
+}
+	
+.zoomIconLeft {
+	top: 30px;
+	left: -35px;
+}
+	
+.zoomIconRight {
+	top: 30px;
+	right: -35px;
+}
+	
+.zoomOutIconLeft {
+	display: none;
+	top: 30px;
+	left: 25px;
+}
+	
+.zoomOutIconRight {
+	display: none;
+	top: 30px;
+	right: 40px;
+}
+	
+.zoomIcon:hover {
+	cursor: pointer;
+}
+	
+.zoomOutIcon:hover {
+	cursor: pointer;
+}
+	
+.zoomIcon:focus {
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+	
+.zoomIconLeft:focus {
+	left: 30px;
+}
+
+.zoomIconRight:focus {
+	right: 40px;
+}
+	
+.zoomIcon:focus ~ .zoomOutIcon {
+	display: block;
+}
+	
+.zoomIcon:focus ~ .zoomOutIconLeft {
+	position: absolute;
+	left: -5px;
+}
+	
+.zoomIcon:focus ~ .zoomOutIconRight {
+	position: absolute;
+	right: 5px;
+}
+	
+.zoomIcon:focus  ~ .zoomDivLeft .zoom {
+    width:700px;
+    height:auto;
+    left: 0px;
+	top: 0px;
+    z-index:10;
+}
+	
+.zoomIcon:focus  ~ .zoomDivRight .zoom {
+    width:700px;
+    height:auto;
+    left: 0px;
+	top: 0px;
+    z-index:10;
+}
+	
+.zoomIcon:focus ~ .zoomDivLeft {
+	width:700px;
+    height:auto;
+    left: 50px;
+    top:0px;
+    z-index:10;
+	margin: 20px;
+	padding: 20px;
+	background-color: #434343;
+	border: 1px solid #D5AA3B;
+	box-shadow: 0 0 18px #D5AA3B;
+	border-radius: 40px 40px 40px 40px;
+}
+	
+.zoomIcon:focus ~ .zoomDivRight {
+	width:700px;
+    height:auto;
+    left: -400px;
+    top: 0px;
+    z-index:10;
+	margin: 20px;
+	padding: 20px;
+	background-color: #434343;
+	border: 1px solid #D5AA3B;
+	box-shadow: 0 0 18px #D5AA3B;
+	border-radius: 40px 40px 40px 40px;
+}
+	
+.zoomDiv a {
+	text-decoration: none;
+}
+	
+.readMore {
+	position: absolute;
+	z-index:20;
+	background-color: #FFFFFF;
+	color: #434343;
+	font-family: 'Spinnaker';
+	font-size: 80%;
+	padding: 5px;
+	border-radius: 10px 10px 10px 10px;
+}
+	
+.readMoreLeft {
+	top: 0px;
+	left: -30px;
+}
+	
+.readMoreRight {
+	top: 0px;
+	right: -20px;
+}
+	
+.zoomIcon:focus  ~ .readContainer {
+	display: block;
+}
