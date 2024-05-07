@@ -222,3 +222,35 @@
 .zoomIcon:focus  ~ .readContainer {
 	display: block;
 }
+  
+@media  (min-width: 996px) and (max-width: 1050px) {
+	.zoomIconLeft {
+		left: 0px;
+		top: 25px;
+	}
+	.zoomIconRight {
+		right: 0px;
+		top: 25px;
+	}
+}
+
+@media (min-width: 450px) and (max-width: 560px) {
+	.zoomIconLeft {
+		left: 0px;
+		top: 25px;
+	}
+	.zoomIconRight {
+		right: 0px;
+		top: 25px;
+	}
+	.browseContainer {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+	.readMoreLeft {
+		left: 0px;
+	}
+	.readMoreRight {
+		right: 0px;
+	}
+}
