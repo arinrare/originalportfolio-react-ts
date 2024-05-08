@@ -21,7 +21,7 @@ function App() {
     // <BrowserRouter basename="/portfolio/originalportfoilio-react-ts"> ** Goes in the BrowserRouter tag above the Routes tag
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio/dig251-react-ts">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/browse' element={<Browse />} />
