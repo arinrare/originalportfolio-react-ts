@@ -16,35 +16,25 @@
 	$captcha_success=json_decode($verify);
 	if ($captcha_success->success==false) {
 		$data = array('error' => 'Not verified by Google Recaptcha');
-		echo json_encode(array('data' => $data));
+		header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/#/contact/?form=error&error=Not verified by Google Recaptcha");
 		return;
 	}
 	else if ($captcha_success->success==true) {
 		$recaptchaVerify = true;
 	}
-
 	
-	if (strlen($name) < 1 || strlen($name) > 100) {
-		$data = array('error' => 'Name must not be blank and must be 100 characters or less');
-		echo json_encode(array('data' => $data));
+	if (strlen($name) > 100) {
+		header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/#/contact/?form=error&error=Name must be less than 100 characters");
 		return;
 	}
 	
-	if (strlen($from) < 1) {
-		$data = array('error' => 'Email must not be blank');
-		echo json_encode(array('data' => $data));
+	if (strlen($message) > 2000 ) {
+		header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/#/contact/form=error&error=Message must be less than 2000 characters");
 		return;
 	}
 	
-	if (strlen($message) < 1 || strlen($message) > 2000 ) {
-		$data = array('error' => 'Message must not be blank and must be less than 2000 characters');
-		echo json_encode(array('data' => $data));
-		return;
-	}
-	
-	if (strlen($subject) < 1 || strlen($subject) > 100 ) {
-		$data = array('error' => 'Subject must not be blank, and less than 2000 characters');
-		echo json_encode(array('data' => $data));
+	if (strlen($subject) > 100 ) {
+		header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/#/contact/form=error&error=Subject must be less than 100 characters");
 		return;
 	}
 	
@@ -73,13 +63,14 @@
 	
 	if (!$mail->send()) { 
 		$result1 = array('status'=>"error", 'message'=>"Mailer Error: " . $mail->ErrorInfo);
+		header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/#/contact/?form=error&error=$mail->ErrorInfo");
 	} else {
 		$result1 = array('status'=>"success", 'message'=>"Message sent.");
 	}
 	
-	$mail = new PHPMailer\PHPMailer\PHPMailer();
+	//$mail = new PHPMailer\PHPMailer\PHPMailer();
 		    
 	$data = array('message' => 'Your email has been sent, Thank you.', "recaptchaVerified" => $recaptchaVerify);
-	echo json_encode(array('data' => $data));
-	header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/");
+	//echo json_encode(array('data' => $data));
+	header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/#/contact/?form=success");
 ?>

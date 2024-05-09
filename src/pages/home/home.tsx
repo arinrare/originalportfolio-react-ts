@@ -12,11 +12,12 @@ const youtube = require('../../images/home/youtubeIcon.png');
 
 const Home = () => {
     
+	sessionStorage.setItem('currentPage', '0');
+		
 	return (
         <>
             <Navmenu />
 			<section className="content">
-		
 				<section className="contentWrapper">
 					
 					<aside className="inline">

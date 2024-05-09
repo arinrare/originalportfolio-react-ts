@@ -1,5 +1,5 @@
 import React , { useEffect } from 'react';
-import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import {Routes, Route, HashRouter} from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/home';
 import Browse from './pages/browse/browse'; 
@@ -12,17 +12,17 @@ import ReactGA from 'react-ga';
 const TrackingID = 'G-FKJK7PJ0VH';
 
 function App() {
+  
   ReactGA.initialize(TrackingID);
   
   useEffect(() => {
-    sessionStorage.setItem('currentPage', '0');
     document.title = "Portfolio of Michael Baggott"
   }, []);
     
     // <BrowserRouter basename="/portfolio/originalportfoilio-react-ts"> ** Goes in the BrowserRouter tag above the Routes tag
   return (
     <>
-      <BrowserRouter basename="/portfolio/dig251-react-ts">
+      <HashRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/browse' element={<Browse />} />
@@ -31,7 +31,7 @@ function App() {
           <Route path='/resume' element={<Resume />} />
           <Route path='/web' element={<Web />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

@@ -9,7 +9,21 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-	
+
+.contentContentWrapper {
+	text-align: center;
+}
+
+.contactErrorShow {
+	color: red;
+	font-family: Verdana;
+	font-size: 14px;
+}
+
+.contactErrorHide {
+	display: none;
+}
+
 .formHeading {
 	background-color: #434343;
 	color: #E4E4E4;

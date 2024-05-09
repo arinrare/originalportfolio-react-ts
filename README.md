@@ -1,7 +1,4 @@
-NOTE: To run locally remove the basename attribute from the BrowserRouter element in App.tsx
-This is only required when configuring the base URL on a subpage on the web host
-
-Additionally, remove the subfolder paths in the webpack config package.json
+# Secrets
 
 Some secrets will need to be configured. They include
     $recaptcha= ; Google reCaptcha secret
