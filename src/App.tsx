@@ -15,6 +15,7 @@ function App() {
   ReactGA.initialize(TrackingID);
   
   useEffect(() => {
+    sessionStorage.setItem('currentPage', '0');
     document.title = "Portfolio of Michael Baggott"
   }, []);
     
