@@ -3,6 +3,16 @@ This is only required when configuring the base URL on a subpage on the web host
 
 Additionally, remove the subfolder paths in the webpack config package.json
 
+Some secrets will need to be configured. They include
+    $recaptcha= ; Google reCaptcha secret
+	$emailusername = ; Username for the host email account
+	$emailpass= ; Password of the host email account
+	$sendtoemailaddress = ; The email address you would like contact emails sent to
+
+Other things to configure in contactemail.php
+    $mail->Host = ""; Your mail host
+    header("Location:https://michaelbaggott.site/portfolio/dig251-react-ts/"); The header redirect to your host
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

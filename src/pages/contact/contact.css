@@ -2,6 +2,12 @@
 	background-color: #9A9A9A;
 	padding: 20px;
 	border-radius:10px;
+	height: 450px;
+}
+
+#root > section > section > section > form > fieldset > div > div > div {
+	margin-left: auto;
+	margin-right: auto;
 }
 	
 .formHeading {
@@ -54,17 +60,12 @@
     resize: vertical;
     text-align: left;
 }
-	
-.textAreaLabel {
-	margin-left: 5px;
-}
-		
-#textArea:hover {
+.textArea:hover {
 	box-shadow: 0 0 5px rgba(213,170,59, 1);
     border:1px solid rgba(213,170,59, 0.8); 
 }
 	
-#textArea:focus {
+.textArea:focus {
 	outline: none;
 	box-shadow: 0 0 5px rgba(213,170,59, 1);
     border:1px solid rgba(213,170,59, 0.8); 
@@ -72,13 +73,13 @@
 	
 
 	
-#form {
+.form {
 	z-index: 0;
 	position: relative;
-	width: 400px;
+	max-width: 400px;
 }
 
-#formContainer {
+.formContainer {
 	margin-top: 50px;
     margin-bottom: 50px; 
     width: 100%;

@@ -7,7 +7,7 @@ import Footer from '../../components/footer/footer';
 
 const Contact = () => {
     
-    const textarea= {rows: 10, cols: 24};
+    const textarea= {rows: 10, cols: 26};
 	const reCaptachaSiteKey = '6LcCXNYpAAAAAJ82vWYbwP_tk1Yy2pLGq5z03coQ';
 	let reccaptchaToken = '';
     
