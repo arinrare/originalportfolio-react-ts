@@ -60,31 +60,7 @@
 	color: #E4E4E4;
 }
 
-.formSuccessShow {
-	color: green;
-	font-family: Verdana;
-	font-size: 18px;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 
-.formSuccessHide {
-	display: none;
-}
-
-.formErrorShow {
-	color: red;
-	font-family: Verdana;
-	font-size: 18px;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}	
-
-.formErrorHide {
-	display: none;
-}
 
 
 	

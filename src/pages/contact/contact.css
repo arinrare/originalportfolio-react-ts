@@ -2,7 +2,7 @@
 	background-color: #9A9A9A;
 	padding: 20px;
 	border-radius:10px;
-	height: 450px;
+	min-height: 500px;
 }
 
 #root > section > section > section > form > fieldset > div > div > div {
@@ -14,10 +14,27 @@
 	text-align: center;
 }
 
-.contactErrorShow {
-	color: red;
-	font-family: Verdana;
-	font-size: 14px;
+.formError {
+	color: white;
+	text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	background-color: #545454;
+	padding: 5px;
+	width: 100%;
+	z-index: 1;
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center	;
+}
+
+.formSuccessHide {
+	display: none;
+}
+
+.formErrorHide {
+	display: none;
 }
 
 .contactErrorHide {
@@ -90,7 +107,7 @@
 .form {
 	z-index: 0;
 	position: relative;
-	max-width: 400px;
+	min-width: 400px;
 }
 
 .formContainer {

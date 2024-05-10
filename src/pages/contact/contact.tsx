@@ -8,7 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 
 const Contact = () => {
     
-    const textarea= {rows: 10, cols: 26};
+    const textarea= {rows: 10, cols: 24};
 	const reCaptachaSiteKey = '6LcCXNYpAAAAAJ82vWYbwP_tk1Yy2pLGq5z03coQ';
 	    
 	const [token, setToken] = useState({reccaptchaToken: ''});
@@ -55,9 +55,6 @@ const Contact = () => {
         <>
             <Navmenu />
             <section className="content">
-				<div className={formSuccess === 'true' ? 'formSuccessShow' : 'formSuccessHide'}>Your contact email has been sent successfully</div>
-				<div className={formError.error === 'true' ? 'formErrorShow' : 'formErrorHide'}>{formError.message}</div>
-	
 				<section className="contentContentWrapper">
 							
 					<section className="formContainer">
@@ -89,7 +86,9 @@ const Contact = () => {
 									<input className="button" type = "submit" value = "Submit"/>
 									<input className="button" type = "reset" value = "Reset" />
 								</section>
-								<div className={error === 'true' ? 'contactErrorShow' : 'contactErrorHide'}>Please check the Captcha</div>
+								<div className={error === 'true' ? 'contactErrorShow formError' : 'contactErrorHide'}>Please check the Captcha</div>
+								<div className={formSuccess === 'true' ? 'formSuccessShow formError' : 'formSuccessHide'}>Your contact email has been sent successfully</div>
+								<div className={formError.error === 'true' ? 'formErrorShow formError' : 'formErrorHide'}>{formError.message}</div>
 								<ReCAPTCHA 
           							sitekey={reCaptachaSiteKey}
           							onChange={onChange}

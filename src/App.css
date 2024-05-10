@@ -22,6 +22,12 @@ body {
 	width: 100%;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: 'Spinnaker';
   src: 	url('./fonts/Spinnaker-Regular.woff2') format('woff'), /* Modern Browsers */
