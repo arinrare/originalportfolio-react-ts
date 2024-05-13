@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import './resume.css';
 import Navmenu from '../../components/navmenu/navmenu';
 import Footer from '../../components/footer/footer';
@@ -9,6 +10,11 @@ const oraTri = require('../../images/resume/orangeTri.png');
 const aquaTri = require('../../images/resume/aquaTri.png');
 
 const Resume = () => {
+    useEffect(() => {
+		document.title = "Oroginal Portfolio of Michael Baggott - Resume"
+		ReactGA.send({ hitType: "pageview", page: "/resume", title: "Original Portfolio - Resume Page" });
+	});
+    
     return (
         <>
             <Navmenu />

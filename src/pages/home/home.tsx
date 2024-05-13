@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import './home.css';
 import Navmenu from '../../components/navmenu/navmenu';
 import Footer from '../../components/footer/footer';
@@ -13,6 +14,11 @@ const youtube = require('../../images/home/youtubeIcon.png');
 const Home = () => {
     
 	sessionStorage.setItem('currentPage', '0');
+
+	useEffect(() => {
+		document.title = "Orignal Portfolio of Michael Baggott - Home"
+		ReactGA.send({ hitType: "pageview", page: "/home", title: "Original Portfolio - Home Page" });
+	});
 		
 	return (
         <>
