@@ -12,7 +12,7 @@ const aquaTri = require('../../images/resume/aquaTri.png');
 const Resume = () => {
     useEffect(() => {
 		document.title = "Oroginal Portfolio of Michael Baggott - Resume"
-		ReactGA.send({ hitType: "pageview", page: "/resume", title: "Original Portfolio - Resume Page" });
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/resume", title: "Original Portfolio - Resume Page" });
 	});
     
     return (

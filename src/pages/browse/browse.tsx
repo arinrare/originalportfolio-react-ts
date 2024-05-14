@@ -18,7 +18,7 @@ let tab =  {tabIndex: 0};
 const Browse = () => {
     useEffect(() => {
 		document.title = "Original Portfolio of Michael Baggott - Browse"
-		ReactGA.send({ hitType: "pageview", page: "/browse", title: "Original Portfolio - Browse Page" });
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/browse", title: "Original Portfolio - Browse Page" });
 	});
     
     if (sessionStorage.getItem('currentPage') === null) {

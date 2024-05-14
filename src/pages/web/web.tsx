@@ -11,7 +11,7 @@ const dotsRight = require('../../images/programming/dotsRight.png');
 const Web = () => {
     useEffect(() => {
 		document.title = "Original Portfolio of Michael Baggott - Web"
-		ReactGA.send({ hitType: "pageview", page: "/web", title: "Original Portfolio - Web Page" });
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/web", title: "Original Portfolio - Web Page" });
 	});
     
     if (sessionStorage.getItem('currentPage') === null) {

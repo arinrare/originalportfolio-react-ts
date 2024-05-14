@@ -13,7 +13,7 @@ const Programming = () => {
     
     useEffect(() => {
 		document.title = "Original Portfolio of Michael Baggott - Programming"
-		ReactGA.send({ hitType: "pageview", page: "/programming", title: "Original Portfolio - Programming Page" });
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/programming", title: "Original Portfolio - Programming Page" });
 	});
     
     if (sessionStorage.getItem('currentPage') === null) {

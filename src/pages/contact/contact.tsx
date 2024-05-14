@@ -20,7 +20,7 @@ const Contact = () => {
 
 	useEffect(() => {
 		document.title = "Original Portfolio of Michael Baggott - Contact"
-		ReactGA.send({ hitType: "pageview", page: "/contact", title: "Original Portfolio - Contact Page" });
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/contact", title: "Original Portfolio - Contact Page" });
 		
 		if(searchParams.get("form") === 'success') {
 			setFormSuccess('true');

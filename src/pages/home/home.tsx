@@ -17,7 +17,7 @@ const Home = () => {
 
 	useEffect(() => {
 		document.title = "Orignal Portfolio of Michael Baggott - Home"
-		ReactGA.send({ hitType: "pageview", page: "/home", title: "Original Portfolio - Home Page" });
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/home", title: "Original Portfolio - Home Page" });
 	});
 		
 	return (
