@@ -82,13 +82,16 @@ const Contact = () => {
 								<section>
 									<input type="hidden" name="recaptchaToken" value={token.reccaptchaToken} />	
 								</section>
+								<section>
+									<div className={error === 'true' ? 'contactErrorShow formError' : 'contactErrorHide'}>Please check the Captcha</div>
+									<div className={formSuccess === 'true' ? 'formSuccessShow formError' : 'formSuccessHide'}>Your contact email has been sent successfully</div>
+									<div className={formError.error === 'true' ? 'formErrorShow formError' : 'formErrorHide'}>{formError.message}</div>
+								</section>
 								<section className="buttonHolder">
 									<input className="button" type = "submit" value = "Submit"/>
 									<input className="button" type = "reset" value = "Reset" />
 								</section>
-								<div className={error === 'true' ? 'contactErrorShow formError' : 'contactErrorHide'}>Please check the Captcha</div>
-								<div className={formSuccess === 'true' ? 'formSuccessShow formError' : 'formSuccessHide'}>Your contact email has been sent successfully</div>
-								<div className={formError.error === 'true' ? 'formErrorShow formError' : 'formErrorHide'}>{formError.message}</div>
+								
 								<ReCAPTCHA 
           							sitekey={reCaptachaSiteKey}
           							onChange={onChange}
