@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { HashLink } from 'react-router-hash-link';
 import './browse.css';
 import Navmenu from '../../components/navmenu/navmenu';
@@ -15,6 +16,11 @@ const hobbit = require('../../images/browse/hobbit.jpg');
 let tab =  {tabIndex: 0};
 
 const Browse = () => {
+    useEffect(() => {
+		document.title = "Original Portfolio of Michael Baggott - Browse"
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/browse", title: "Original Portfolio - Browse Page" });
+	});
+    
     if (sessionStorage.getItem('currentPage') === null) {
         handleClick('0');
     }

@@ -7,16 +7,16 @@ import Programming from './pages/programming/programming';
 import Contact from './pages/contact/contact';
 import Resume from './pages/resume/resume';
 import Web from './pages/web/web';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const TrackingID = 'G-FKJK7PJ0VH';
 
 function App() {
   
-  ReactGA.initialize(TrackingID);
-  
   useEffect(() => {
-    document.title = "Portfolio of Michael Baggott"
+    document.title = "Original Portfolio of Michael Baggott"
+    console.log("Initializing Google Analytics");
+    ReactGA.initialize(TrackingID);
   }, []);
     
     // <BrowserRouter basename="/portfolio/originalportfoilio-react-ts"> ** Goes in the BrowserRouter tag above the Routes tag

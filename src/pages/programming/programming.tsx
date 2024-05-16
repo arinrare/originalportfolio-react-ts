@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { HashLink } from 'react-router-hash-link';
 import './programming.css';
 import Navmenu from '../../components/navmenu/navmenu';
@@ -9,6 +10,11 @@ const dotsRight = require('../../images/programming/dotsRight.png');
 
 
 const Programming = () => {
+    
+    useEffect(() => {
+		document.title = "Original Portfolio of Michael Baggott - Programming"
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/programming", title: "Original Portfolio - Programming Page" });
+	});
     
     if (sessionStorage.getItem('currentPage') === null) {
         handleClick('0');

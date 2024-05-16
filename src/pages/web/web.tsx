@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { HashLink } from 'react-router-hash-link';
 import './web.css';
 import Navmenu from '../../components/navmenu/navmenu';
@@ -8,6 +9,10 @@ const dotsRight = require('../../images/programming/dotsRight.png');
 
 
 const Web = () => {
+    useEffect(() => {
+		document.title = "Original Portfolio of Michael Baggott - Web"
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/web", title: "Original Portfolio - Web Page" });
+	});
     
     if (sessionStorage.getItem('currentPage') === null) {
         handleClick('0');

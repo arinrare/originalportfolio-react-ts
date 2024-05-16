@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga4';
 import ReCAPTCHA from "react-google-recaptcha";
 import './contact.css';
 import Navmenu from '../../components/navmenu/navmenu';
@@ -18,6 +19,9 @@ const Contact = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
 
 	useEffect(() => {
+		document.title = "Original Portfolio of Michael Baggott - Contact"
+		ReactGA.send({ hitType: "pageview", page: "/originalportfolio/contact", title: "Original Portfolio - Contact Page" });
+		
 		if(searchParams.get("form") === 'success') {
 			setFormSuccess('true');
 			setSearchParams({});
