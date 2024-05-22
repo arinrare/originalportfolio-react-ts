@@ -61,7 +61,7 @@ const Web = () => {
                                 <article className="inline projectLabel wordWrap projectPadding">Description:</article><article className="inline wordWrap projectDescription projectPadding">This assessment shows some more advanced use of web development, including use of the PHP server side processing language, and jQuery, an API for Javascript. Again, not taking design into consideration, the site shows some more advanced user input validation using a combination of server-side and client-side methods, some use of HTML5 elements, and a basic image gallery.</article>
                             </section>
                             <section>
-                                <article className="inline projectLabel wordWrap projectPadding">Link to Site</article><article className="inline projectDescription projectPadding"><a className="projectLink" href = "hobbit/" target="_blank">The Hobbit</a></article>
+                                <article className="inline projectLabel wordWrap projectPadding">Link to Site</article><article className="inline projectDescription projectPadding"><a className="projectLink" href = "/portfolio/thehobbit-react-ts/" target="_blank">The Hobbit</a></article>
                             </section>
                             <section>
                                 <article className="inline projectLabel wordWrap projectPadding">Browse Project:</article><article className="inline projectDescription projectPadding">Go to <HashLink onClick={() => handleClick('2')} className="projectLink" to='/browse#hobbit'>Browse</HashLink>  Page</article>
